@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Business English</title>
+    <link rel="stylesheet" href="../css/vx4.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(135deg, #000 0%, #111 40%, #0d47a1 100%);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px #42a5f5;
+    }
+
+    button {
+      background: #42a5f5;
+      color: #fff;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1.1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(66,165,245,0.7);
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #1e88e5;
+      box-shadow: 0 0 25px rgba(33,150,243,1);
+    }
+
+    .output {
+      margin-top: 25px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      min-height: 30px;
+      text-align: center;
+      color: #e3f2fd;
+      max-width: 600px;
+      white-space: pre-line; /* ให้ขึ้นบรรทัดใหม่ตาม \n */
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 8px;
+      background: #42a5f5;
+      animation: blink 0.7s steps(1) infinite;
+    }
+
+    @keyframes blink {
+      50% { background: transparent; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcoming New Clients</h1>
+  <button onclick="showMessage()">✨ Click Me ✨</button>
+  <div class="output" id="output"></div>
+
+  <script>
+    const messages = [
+      "mond: Good morning, welcome to our office!",
+      "a: Hello! How can I assist you today?",
+      "mond: Nice to meet you, please have a seat.",
+      "a: Thank you for coming on time to the meeting.",
+      "mond: Could I offer you some coffee or tea?",
+      "a: Let’s review today’s agenda together.",
+      "mond: I’ll introduce you to our project manager shortly.",
+      "a: We really appreciate your interest in our company.",
+      "mond: Please feel free to ask any questions.",
+      "a: Shall we schedule a follow-up meeting next week?",
+      "mond: It was a pleasure discussing business with you.",
+      "a: We look forward to working with you in the future."
+    ];
+
+    let currentIndex = 0; // เริ่มที่ประโยคแรก
+
+    function typeWriter(text, elementId, callback) {
+      let i = 0;
+      const speed = 50; // ความเร็วในการพิมพ์ (ms)
+      const output = document.getElementById(elementId);
+      output.innerHTML = ""; // เคลียร์ก่อน
+      const cursor = document.createElement("span");
+      cursor.className = "cursor";
+      output.appendChild(cursor);
+
+      const interval = setInterval(() => {
+        if (i < text.length) {
+          cursor.insertAdjacentText("beforebegin", text.charAt(i));
+          i++;
+        } else {
+          clearInterval(interval);
+          cursor.remove();
+          if (callback) callback();
+        }
+      }, speed);
+    }
+
+    function showMessage() {
+      if (currentIndex >= messages.length) {
+        currentIndex = 0; // วนกลับไปเริ่มใหม่
+      }
+      const message = messages[currentIndex];
+      typeWriter(message, "output");
+      currentIndex++;
+    }
+  </script>
+   <menu>
+        <ul class="menu">
+            <li><a href="vx.html">หน้าหลัก</a></li>
+        </ul>
+    </menu>
+</body>
+</html>

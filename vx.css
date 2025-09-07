@@ -1,0 +1,129 @@
+/* รีเซ็ตพื้นฐาน */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ทำให้ navbar ดูชัดเจน */
+nav {
+    background-color: #24a5b9; /* สีดำเทา */
+    padding: 10px 40px;
+}
+
+/* container กำหนดความกว้างกลางจอ */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ใช้ flex จัดระเบียบ */
+.nav-con {
+    display: flex;
+    justify-content: space-between; /* โลโก้ซ้าย / เมนูขวา */
+    align-items: center;
+}
+
+/* โลโก้กับชื่อเว็บ */
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 23px;
+    font-weight: bold;
+
+}
+
+.logo img {
+    height: 60px;
+    margin-right: 10px;
+}
+
+/* เมนูด้านขวา */
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.menu li a:hover {
+    color: #ffcc00; /* สีเหลืองเมื่อ hover */
+}
+/* ปรับซ้ายขวา ของรูป VScode */
+.img1 {
+    margin-left: 1400px;
+    margin-top: 50px;
+}
+/* โทนสีหลัก: ฟ้า-น้ำเงิน-ขาว */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #e0f7ff, #c0e0ff, #ffffff);
+    margin: 0;
+    padding: 0;
+    color: #003366;
+}
+
+/* เมนูนำทาง */
+nav {
+    background-color: #007acc;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-con {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.nav-con .logo p {
+    display: inline-block;
+    color: #ffffff;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* เมนู */
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.menu li a:hover {
+    background-color: #003366;
+    color: #e0f7ff;
+}
+
+/* ภาพ */
+.img1 {
+    display: block;
+    margin: 20px auto;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img1:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}

@@ -1,0 +1,78 @@
+/* รีเซ็ตค่าเบื้องต้น */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+    background: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* หัวข้อหลัก */
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* กล่องเนื้อหา */
+.container {
+    max-width: 800px;
+    background: #fff;
+    padding: 25px;
+    margin: 0 auto 30px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* หัวข้อรอง */
+.container h2 {
+    font-size: 1.4rem;
+    color: #34495e;
+    margin: 20px 0 10px;
+    border-left: 4px solid #3498db;
+    padding-left: 10px;
+}
+
+/* ย่อหน้า */
+.container p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #444;
+}
+/* เมนู */.menu {
+  position: fixed;      /* ให้อยู่ตำแหน่งคงที่บนหน้าจอ */
+  bottom: 20px;         /* ระยะจากด้านล่าง */
+  right: 20px;          /* ระยะจากด้านขวา */
+  background-color: #ff9800; /* สีส้ม */
+  padding: 10px 15px;
+  border-radius: 8px;   /* มุมโค้งเล็กน้อย */
+  list-style: none;     /* ลบเครื่องหมาย bullet */
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.menu li {
+  margin: 5px 0;        /* เว้นระยะระหว่างรายการ */
+}
+
+.menu a {
+  color: #fff;           /* ตัวอักษรสีขาว */
+  text-decoration: none; /* ลบเส้นใต้ */
+  font-weight: bold;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+body {
+    background: linear-gradient(135deg, #27c3b1, #ac3f9c);
+    color: #fff;   /* เปลี่ยนตัวอักษรให้ขาวอ่านง่าย */
+    line-height: 1.6;
+    padding: 20px;
+}

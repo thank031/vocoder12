@@ -1,0 +1,62 @@
+/* รีเซ็ต */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #000428, #004e92);
+  color: #fff;
+  line-height: 1.6;
+  padding: 20px;
+  min-height: 100vh;
+  transition: background 1s ease;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px #42a5f5;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+menu {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.menu {
+  list-style: none;
+  display: inline-flex;
+  gap: 15px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #fff;
+  background: #42a5f5;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.menu li a:hover {
+  background: #1e88e5;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #42a5f5;
+}
